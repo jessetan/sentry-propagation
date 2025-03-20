@@ -13,7 +13,7 @@ export default function Home() {
     await fetch("/api/hello-approuter");
 
     Sentry.captureException(
-      new Error("This is a test error with app router breadcrumb")
+      new Error("This is a client-side test error with app router breadcrumb")
     );
   };
 
@@ -26,7 +26,7 @@ export default function Home() {
     await fetch("/api/hello-pagerouter");
 
     Sentry.captureException(
-      new Error("This is a test error with page router breadcrumb")
+      new Error("This is a client-side test error with page router breadcrumb")
     );
   };
 

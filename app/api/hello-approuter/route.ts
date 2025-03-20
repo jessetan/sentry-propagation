@@ -6,5 +6,7 @@ export async function GET() {
     category: "test",
     message: "serverside app router breadcrumb",
   });
+
+  Sentry.captureException(new Error("serverside app router error"));
   return NextResponse.json({ message: "Hello from app router" });
 }
